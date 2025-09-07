@@ -18,28 +18,115 @@
     <!-- Meu css -->
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/colors.css">
 </head>
 
 <body>
-    <section class="content">
+    <section id="content" class="content">
         <h1>Pokédex</h1>
         <ol id="pokemonList" class="pokemons">
-            <li class="pokemon">
-                <span class="number">#001</span>
-                <span class="name">Bulbasaur</span>
-                <div class="detail">
-                    <ol class="types">
-                        <li class="type">grass</li>
-                        <li class="type">poison</li>
-                    </ol>
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                    alt="Bulbasaur">
-                </div>
-            </li>
         </ol>
+        <div class="pagination">
+            <button type="button" id="loadMore">load more</button>
+        </div>
+    </section>
+    <section id="details" class="details esconder">
+        <div class="topDetails">
+            <h2>Detalhes</h2>
+            <img src="./assets/icons/xmark-solid-full.svg" alt="Botão de fechar detalhes" style="width: 24px;"
+                id="closeBtn" />
+        </div>
+        <div class="box">
+            <div id="imageBackgroundDetail" class="imageBackgroundDetail">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
+                    alt="pokemon" class="imageDetail" id="imageDetail">
+            </div>
+            <div class="detailsContent">
+                <div class="headerDetails">
+                    <h3 id="nameDetail" class="capitalize">Bulba</h3>
+                    <span id="idDetail">001</span>
+                </div>
+                <ol id="typesDetail" class="typesDetail">
+                    <span class="typeDetail capitalize grass">tipo 1</span>
+                    <span class="typeDetail capitalize electric">tipo 2</span>
+                </ol>
+                <div class="attributesDetails">
+                    <div class="attribute">
+                        <span>
+                            HP
+                        </span>
+                        <div class="attributeBarContainer">
+                            <span id="hp" class="attributeNumber">10</span>
+                            <div class="attributeBarBase">
+                                <div class="attributeBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attribute">
+                        <span>
+                            ATK
+                        </span>
+                        <div class="attributeBarContainer">
+                            <span id="atk" class="attributeNumber">10</span>
+                            <div class="attributeBarBase">
+                                <div class="attributeBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attribute">
+                        <span>
+                            DEF
+                        </span>
+                        <div class="attributeBarContainer">
+                            <span id="def" class="attributeNumber">10</span>
+                            <div class="attributeBarBase">
+                                <div class="attributeBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attribute">
+                        <span>
+                            S-ATK
+                        </span>
+                        <div class="attributeBarContainer">
+                            <span id="satk" class="attributeNumber">10</span>
+                            <div class="attributeBarBase">
+                                <div class="attributeBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attribute">
+                        <span>
+                            S-DEF
+                        </span>
+                        <div class="attributeBarContainer">
+                            <span id="sdef" class="attributeNumber">10</span>
+                            <div class="attributeBarBase">
+                                <div class="attributeBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attribute">
+                        <span>
+                            SPD
+                        </span>
+                        <div class="attributeBarContainer">
+                            <span id="spd" class="attributeNumber">10</span>
+                            <div class="attributeBarBase">
+                                <div class="attributeBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 200 max -->
+        </div>
+
     </section>
 
 
+    <script src="./assets/js/pokemon-model.js"></script>
     <script src="./assets/js/pokeapi.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
